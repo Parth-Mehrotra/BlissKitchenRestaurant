@@ -1,6 +1,12 @@
-html {
-	background: black;
+html, body {
+	height: 100%;
 }
+
+section {
+	background: black;
+	height: 100%;
+}
+
 a {
 	text-decoration: none;
 }
@@ -19,7 +25,6 @@ header img {
 	display: block;
 	padding: 0;
 }
-
 
 #menuwrapper {
 	height: auto;
