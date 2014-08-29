@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+		<!--<link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css" />-->
+		<style>
+			.outerDiv {
+				background-color: green;
+				margin: 20px;
+				border-radius: 20px;
+				box-shadow: 10px 10px 5px #888888;
+				padding: 20px;
+
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			var added = [];
+			$(document).ready(function() {
+				Parse.initialize("oaZEhvpdjUWDQZjG4zr60avFlkH7qg8wpSssnSqQ", "HeKIdEVHD5aXTe0kHXIKoSXG2v1qvMGEL05hMtiu");
+				window.setInterval(function() {
+					refresh();
+				}, 5000);
+			});
+			function refresh() {
+				console.log("called");
+				(new Parse.Query(Parse.Object.extend("PendingOrders"))).equalTo("Status", "PENDING").find({
+					success: function(results) {
+						var exists = false;
+						console.log(results);
+						for (var i = 0; i < results.length; i++) {
+							for (var x = 0; x < added.length; x++) {
+								if (results[i].id === added[x].id) {
+									exists = true;
+									console.log('exists');
+								}
+							}
+							if (!exists) {
+								console.log('added');
+								add(results[i]);
+							}
+						}
+					},
+					error: function(error) {
+						console.log("ERROR");
+						console.log(error);
+					}
+
+				});
+			}
+
+			function add(id) {
+				added.push(id);
+				var orderArray = id.get("Order");
+				var order = "";
+				for (var i = 0; i < orderArray.length; i++) {
+					order = order + orderArray[i] + '<br>';
+				}
+				writeToHtml(id, order);
+
+				function writeToHtml(i, order) {
+					$("body").append(' \
+						<div class="outerDiv" > \
+							<div  id="address'+i.id+'"> \
+								<span class="addressDummy">Address:</span> \
+								<span class="addressInfo">'+i.get("Address")+'</span> \
+							</div> \
+							<div  id="total'+i.id+'"> \
+								<span class="totalDummy">Total:</span> \
+								<span class="totalInfo">'+i.get("Total")+'</span> \
+							</div> \
+							<div  id="name'+i.id+'"> \
+								<span class="nameDummy">Name:</span> \
+								<span class="nameInfo">'+i.get("Name")+'</span> \
+							</div> \
+							<div  id="phone'+i.id+'"> \
+								<span class="phoneDummy">Number:</span> \
+								<span class="phoneInfo">'+i.get("Number")+'</span> \
+							</div> \
+							<div  id="email'+i.id+'"> \
+								<span class="emailDummy">Email:</span> \
+								<span class="emailInfo">'+i.get("Email")+'</span> \
+							</div> \
+							<div  id="order'+i.id+'"> \
+								<span class="OrderDummy">Order:</span><br> \
+								<span class="OrderInfo">'+order+'</span> \
+							</div> \
+						</div> \
+					');
+					$('.outerDiv').click(function() {
+						$(this).hide();
+					});
+				}
+			}
+
+		</script>
+	</body>
+</html>

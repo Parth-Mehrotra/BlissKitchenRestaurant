@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html id="index">
+	<head>
+		<meta charset="utf-8">
+		<title>Welcome</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/responsive.css">
+		<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+		<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="/owl-carousel/owl.carousel.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<header>
+			<a href="/" id="brand-logo">
+				<img src="img/brand-logo.png" alt="Nimais Bliss Kitchen Logo"/>
+			</a>
+			<nav>
+				<ul>
+					<li><a href="order">Order</a></li>
+					<li><a href="book">Book</a></li>
+					<li><a href="contact">Contact</a></li>
+					<li><a href="about">About</a></li>
+				</ul>
+			</nav>
+			<div id="spacer">
+			</div>
+		</header>
+		<section id="indexSection">
+			<div id="ex" class="owl-carosel">
+				<div class="item">
+					<div class="innerItem">
+						<img src="img/sun0.jpg">
+						<div class="caption_overlay">
+							<h2 class="overlay_title">Sunset</h2>
+							<p class="overlay_content">Lorem ipsum doler sit dui amet.</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="innerItem">
+						<img src="img/sun1.jpg">
+						<div class="caption_overlay">
+							<h2 class="overlay_title">Sunset</h2>
+							<p class="overlay_content">Lorem ipsum doler sit dui amet.</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="innerItem">
+						<img src="img/sun2.jpg">
+						<div class="caption_overlay">
+							<h2 class="overlay_title">Sunset</h2>
+							<p class="overlay_content">Lorem ipsum doler sit dui amet.</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="innerItem">
+						<img src="img/sun3.jpg">
+						<div class="caption_overlay">
+							<h2 class="overlay_title">Sunset</h2>
+							<p class="overlay_content">Lorem ipsum doler sit dui amet.</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="innerItem">
+						<img src="img/sun4.jpg">
+						<div class="caption_overlay">
+							<h2 class="overlay_title">Sunset</h2>
+							<p class="overlay_content">Lorem ipsum doler sit dui amet.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script>
+			$(document).ready(function() {
+				$("#ex").owlCarousel({
+					slideSpeed : 300,
+					paginationSpeed : 400,
+					singleItem : true
+				});
+			});
+		</script>
+	</body>
+</html>
