@@ -49,7 +49,8 @@
 
 		</section>
 		<script>
-			Parse.initialize("oaZEhvpdjUWDQZjG4zr60avFlkH7qg8wpSssnSqQ", "HeKIdEVHD5aXTe0kHXIKoSXG2v1qvMGEL05hMtiu");
+			//I Parth Mehrotra promise to always comment my code from now on.
+			Parse.initialize("9Yy4ALtlIqa1HB0qaT7J4exXlDpzlIQbyIqpr6FS", "g73PbpvroTzvl70AlTVcV2jNRAQjlGDxE2SzP9vW");
 			Stripe.setPublishableKey('pk_test_Om9IcNMPW6OefK3g5GogSXgG');
 
 			var quantity = [];
@@ -64,9 +65,10 @@
 				getMenu();
 			});
 			
+			//Get all of the categories that the menu will have
 			function getMenu() {
 				var categories = [];
-				(new Parse.Query(Parse.Object.extend("MenuCategories"))).find({
+				(new Parse.Query(Parse.Object.extend("TempMenuCategories"))).find({
 					success: function(results) {
 						for (var i = 0; i < results.length; i++) {
 							categories[i] = results[i].get('Names');
@@ -77,8 +79,10 @@
 					}
 				});
 			}
-			
+
+			//Show the categories in their boxes.
 			function showCategories(categories) {
+				console.log(categories);
 				for (var i = 0; i < categories.length; i++) {
 					expanded[i] = false;
 					$("#menu").append('<div class="catWrapper" id="catWrapper'+i+'"></div>');
@@ -92,14 +96,15 @@
 						}
 						$(this).next().slideToggle();
 					});
-					$("#catWrapper"+i).append("<ul class=\"detail"+i+"\" id=\""+categories[i]+"\"></ul>");
+					$("#catWrapper"+i).append("<ul class=\"detail"+i+"\" id=\""+"cat"+hash(categories[i])+"\"></ul>");
 					$("#expandClickArea"+i).next().slideToggle();
 				}
 				getDetails(categories);
 			}
 
+			//Go get all the menu objects to put into menu
 			function getDetails(categories) {
-				(new Parse.Query(Parse.Object.extend("Menu"))).find({
+				(new Parse.Query(Parse.Object.extend("TempMenu2"))).limit(1000).find({
 					success: function(results) {
 						for (var i = 0; i < results.length; i++) {
 							objectCosts[i] = results[i].get("Price");
@@ -111,6 +116,7 @@
 				});
 			}
 			
+			//Takes the menus, and categories and displays them.
 			function showDetails(menuContents, categories) {
 				var total = 0;
 				for (var i = 0; i < menuContents.length; i++) {
@@ -119,7 +125,8 @@
 							quantity[total] = 0;
 							//refObjects[total] = menuContents[i].id;
 							refObjects[total] = "("+menuContents[i].get('Category')+") "+menuContents[i].get('Dish');
-							$("#"+categories[j]).append(' \
+							console.log(menuContents[total].get('Dish') + "\t" + refObjects[total]);
+							$("#cat"+hash(categories[j])).append(' \
 								<li> \
 									<h3 class=\""+total+"\" >'+menuContents[i].get('Dish')+"</h3> \
 									<p class=\""+total+"\" >"+menuContents[i].get('Description')+"</p> \
@@ -130,7 +137,7 @@
 										<p class=\"priceText\" id=\"priceTag"+total+"\">Price: $"+(menuContents[i].get('Price')/100)+"</p> \
 									</div> \
 								</li> \
-								");
+							");
 							total++;
 						}
 					}
@@ -379,6 +386,10 @@
 					});
 				}
 			};
+
+			function hash(s){
+				return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+			}
 		</script>
 	</body>
 </html>

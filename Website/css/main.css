@@ -1,9 +1,16 @@
-#order, #order body{ 
-	background: #acacac;
+#book, #content, #image, #contact, #about, #order, #order body{ 
+	background: #C5DAC5;
+}
+
+#order header, #book header, #contact header, #about header {
+	margin-bottom: 15px;
+}
+#book section, #contact section, #about section {
+	font-size: 130%;
 }
 
 section {
-	background: #acacac;
+	background: #C5DAC5;
 }
 
 a {
@@ -98,7 +105,7 @@ h2 {
 }
 
 #menu {
-	background: #acacac;
+	background: ##C5DAC5;
 	float: clear;
 	width: 100%;
 	display: block;
@@ -150,7 +157,7 @@ h2 {
 	float: clear;
 	width: 100%;
 	display: block;
-	background: #acacac;
+	background: #C5DAC5;
 }
 
 #preFinalize {
@@ -235,6 +242,7 @@ h2 {
 .item {
 	text-align: center;
 	width: 100%;
+	background: #20421E;
 }
 
 .innerItem {
@@ -250,12 +258,12 @@ h2 {
 }
 
 #index {
-	background: #000000;
+	background: #C5DAC5;
 	overflow: hidden;
 }
 
 #indexSection {
-	background: #000000;
+	background: #C5DAC5;
 }
 
 .caption_overlay {
