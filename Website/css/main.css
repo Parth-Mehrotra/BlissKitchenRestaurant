@@ -230,9 +230,9 @@ section {
 
 #ex .item .innerItem img {
 	display : block;
-	max-width: 88%;
-	max-height: 88%;
-	margin: 0 auto;
+	max-width: 100%;
+	max-height: 100%;
+	margin: 1 auto;
 	float: center;
 }
 
