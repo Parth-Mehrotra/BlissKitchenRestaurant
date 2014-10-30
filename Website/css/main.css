@@ -253,13 +253,11 @@ h2 {
 	margin: 0 auto;
 	float: center;
 	position: relative;
-	overflow: hidden;
 	transform: translateZ(0);
 }
 
 #index {
 	background: #C5DAC5;
-	overflow: hidden;
 }
 
 #indexSection {
