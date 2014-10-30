@@ -1,10 +1,43 @@
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 1px) {
 	nav a {
 		font-size: 1.25em;
+	}
+
+	#indexSection {
+		margin-top: 0;
+	}
+	.overlay_title {
+		font-size: 150%;
+	}
+
+	.overlay_content {
+		font-size: 100%;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.overlay_title {
+		font-size: 200%;
+	}
+
+	.overlay_content {
+		font-size: 150%;
 	}
 }
 
 @media screen and (min-width: 800px) {
+	.overlay_title {
+		font-size: 250%;
+	}
+
+	.overlay_content {
+		font-size: 150%;
+	}
+
+	#indexSection {
+		margin-top: 4px;
+	}
+
 	header {
 		background-color: #3F853D;
 		display: block;
