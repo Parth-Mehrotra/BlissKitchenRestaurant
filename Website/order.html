@@ -27,27 +27,28 @@
 			<div id="spacer">
 			</div>
 		</header>
-		<section id="menu">
-		</section>
-		<section id="rightPane">
-			<div id="formStuff">
-				<div id="preFinalize">
-					<p class="costText">
-						Total:
-					</p>
-					<p class="costText" id="totalCost">$0.00</p>
-					<div onclick="deliveryClicked(this)" class="choiceButton" id="deliveryChoice">
-						<p id="deliveryText">Delivery</p>
-					</div>
-					<div onclick="pickupClicked(this)" class="choiceButton" id="pickupChoice">
-						<p id="pickupText">Pickup</p>
+		<div id="paddingDiv">
+			<section id="menu">
+			</section>
+			<section id="rightPane">
+				<div id="formStuff">
+					<div id="preFinalize">
+						<p class="costText">
+							Total:
+						</p>
+						<p class="costText" id="totalCost">$0.00</p>
+						<div onclick="deliveryClicked(this)" class="choiceButton" id="deliveryChoice">
+							<p id="deliveryText">Delivery</p>
+						</div>
+						<div onclick="pickupClicked(this)" class="choiceButton" id="pickupChoice">
+							<p id="pickupText">Pickup</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div id="finalInformation">
-			</div>
-
-		</section>
+				<div id="finalInformation">
+				</div>
+			</section>
+		</div>
 		<script>
 			//I Parth Mehrotra promise to always comment my code from now on.
 			Parse.initialize("9Yy4ALtlIqa1HB0qaT7J4exXlDpzlIQbyIqpr6FS", "g73PbpvroTzvl70AlTVcV2jNRAQjlGDxE2SzP9vW");

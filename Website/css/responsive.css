@@ -7,21 +7,23 @@
 		margin-top: 0;
 	}
 	.overlay_title {
-		font-size: 150%;
+		font-size: 70%;
+		padding-bottom: 0;
 	}
 
 	.overlay_content {
-		font-size: 100%;
+		font-size: 70%;
+		padding-top: 10px;
 	}
 }
 
 @media screen and (min-width: 500px) {
 	.overlay_title {
-		font-size: 200%;
+		font-size: 100%;
 	}
 
 	.overlay_content {
-		font-size: 150%;
+		font-size: 100%;
 	}
 }
 
@@ -77,6 +79,10 @@
 		clear: both;
 	}
 
+	.pageContent {
+		padding-left: 10%;
+	}
+
 	.pageContent #image img {
 		float: left;
 		max-width: 40%;
@@ -90,14 +96,16 @@
 
 
 	#menu {
-		width: 49%;
+		width: 39%;
 		display: inline-block;
 		float: left;
+		padding-left: 10%;
 	}
 
 	#rightPane {
-		width: 49%;
+		width: 39%;
 		float: right;
 		display: inline-block;
+		padding-right: 10%;
 	}
 }
