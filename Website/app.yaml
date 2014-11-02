@@ -8,7 +8,7 @@ handlers:
 - url: /
   static_files: index.html
   upload: index.html
-- url: /order
+- url: /menu
   static_files: order.html
   upload: order.html
 - url: /css
@@ -19,7 +19,7 @@ handlers:
   static_dir: img
 - url: /bliss_delivery
   script: bliss_delivery.app
-- url: /book
+- url: /catering
   static_files: book.html
   upload: book.html
 - url: /contact
