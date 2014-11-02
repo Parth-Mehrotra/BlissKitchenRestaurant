@@ -87,7 +87,7 @@
 			//Get all of the categories that the menu will have
 			function getMenu() {
 				var categories = [];
-				(new Parse.Query(Parse.Object.extend("TempMenuCategories"))).find({
+				(new Parse.Query(Parse.Object.extend("MenuCategories"))).find({
 					success: function(results) {
 						for (var i = 0; i < results.length; i++) {
 							categories[i] = results[i].get('Names');
@@ -123,7 +123,7 @@
 
 			//Go get all the menu objects to put into menu
 			function getDetails(categories) {
-				(new Parse.Query(Parse.Object.extend("TempMenu2"))).limit(1000).find({
+				(new Parse.Query(Parse.Object.extend("Menu"))).limit(1000).find({
 					success: function(results) {
 						for (var i = 0; i < results.length; i++) {
 							objectCosts[i] = results[i].get("Price");
