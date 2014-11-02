@@ -4,6 +4,7 @@
 [class*="zocial-"]:before {
   font-family: 'zocial', sans-serif;
 }
+
 #book, #content, #image, #contact, #about, #order, #order body{ 
 	background: #C5DAC5;
 }
@@ -329,6 +330,7 @@ footer {
 	background: #3F853D;
 	margin-top: 50px;
 	padding: 0;
+	clear: both;
 }
 
 #social-media {
@@ -406,4 +408,22 @@ footer {
 	rgb(236, 236, 236) 18px 18px,
 	rgb(237, 237, 237) 19px 19px,
 	rgb(238, 238, 238) 20px 20px;
+}
+
+#menuBody {
+	min-height: 100vh;
+}
+
+#menuBody #page-wrapper {
+	min-height: 100vh;
+	margin-bottom: 60px;
+}
+
+#menuBody #page-wrapper:after {
+	content: "";
+	display: block;
+}
+
+#order footer {
+	margin-top: 0;
 }
