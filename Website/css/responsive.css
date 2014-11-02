@@ -6,38 +6,11 @@
 	#indexSection {
 		margin-top: 0;
 	}
-	.overlay_title {
-		font-size: 70%;
-		padding-bottom: 0;
-	}
-
-	.overlay_content {
-		font-size: 70%;
-		padding-top: 10px;
-	}
-}
-
-@media screen and (min-width: 500px) {
-	.overlay_title {
-		font-size: 100%;
-	}
-
-	.overlay_content {
-		font-size: 100%;
-	}
 }
 
 @media screen and (min-width: 800px) {
-	.overlay_title {
-		font-size: 250%;
-	}
-
-	.overlay_content {
-		font-size: 150%;
-	}
-
-	#indexSection {
-		margin-top: 4px;
+	#index body {
+		min-height: 100vh;
 	}
 
 	header {
@@ -77,6 +50,24 @@
 		margin-top: 17px;
 		padding: 0;
 		clear: both;
+	}
+
+	footer {
+		height: 60px;
+	}
+	
+	#contact-info {
+		width: 49%;
+		display: inline-block;
+		float: left;
+		clear: none;
+	}
+	
+	#social-media {
+		width: 49%;
+		display: inline-block;
+		float: right;
+		clear: none;
 	}
 
 	.pageContent {
