@@ -9,8 +9,8 @@ handlers:
   static_files: index.html
   upload: index.html
 - url: /menu
-  static_files: order.html
-  upload: order.html
+  static_files: menu.html
+  upload: menu.html
 - url: /css
   static_dir: css
 - url: /owl-carousel
@@ -20,8 +20,8 @@ handlers:
 - url: /bliss_delivery
   script: bliss_delivery.app
 - url: /catering
-  static_files: book.html
-  upload: book.html
+  static_files: catering.html
+  upload: catering.html
 - url: /contact
   static_files: contact.html
   upload: contact.html

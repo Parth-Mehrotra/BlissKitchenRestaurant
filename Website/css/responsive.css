@@ -1,105 +1,102 @@
 @media screen and (min-width: 1px) {
-	nav a {
-		font-size: 1.25em;
-	}
+    nav a {
+        font-size: 1.25em;
+    }
 
-	#indexSection {
-		margin-top: 0;
-	}
+    #indexSection {
+        margin-top: 0;
+    }
 }
 
 @media screen and (min-width: 800px) {
-	#index body {
-		min-height: 100vh;
-	}
+    #index body {
+        min-height: 100vh;
+    }
 
-	header {
-		background-color: #3F853D;
-		display: block;
-		height: 100px;
-		padding: 0;
-		margin: 0;
-	}
+    header {
+        background-color: #3F853D;
+        display: block;
+        height: 100px;
+        padding: 0;
+        margin: 0;
+    }
 
-	header img {
-		margin-top: 20px;
-		margin-left: 20px;
-		margin-right: auto;
-		float: left;
-		width: 275px;
-	}
+    header img {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: auto;
+        float: left;
+        width: 275px;
+    }
 
-	nav {
-		padding-top: 20px;
-		background: none;
-		float: right;
-		margin-right: 5%;
-		text-align: right;
-	}
+    nav {
+        padding-top: 20px;
+        background: none;
+        float: right;
+        margin-right: 5%;
+        text-align: right;
+    }
 
-	nav a {
-		font-size: 1.5em;
-	}
+    nav a {
+        font-size: 1.5em;
+    }
 
-	#spacer {
-		height: 5px;
-		width: 100%;
-		display: inline-block;
-		background: #44b741;
-		margin: 0;
-		margin-top: 17px;
-		padding: 0;
-		clear: both;
-	}
+    #spacer {
+        height: 5px;
+        width: 100%;
+        display: inline-block;
+        background: #44b741;
+        margin: 0;
+        margin-top: 17px;
+        padding: 0;
+        clear: both;
+    }
 
-	footer {
-		height: 60px;
-	}
-	
-	#contact-info {
-		width: 49%;
-		display: inline-block;
-		float: left;
-		clear: none;
-	}
-	
-	#social-media {
-		width: 49%;
-		display: inline-block;
-		float: right;
-		clear: none;
-	}
+    footer {
+        height: 60px;
+    }
 
-	.pageContent {
-		padding-left: 10%;
-		padding-right: 10%;
-	}
+    #contact-info {
+        width: 49%;
+        display: inline-block;
+        float: left;
+        clear: none;
+    }
 
-	.pageContent #image img {
-		float: left;
-		max-width: 40%;
-		margin: 10px;
-	}
+    #social-media {
+        width: 49%;
+        display: inline-block;
+        float: right;
+        clear: none;
+    }
 
-	.pageContent #content {
-		max-width: 50%;
-		float: right;
-	}
+    .pageContent {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 
-	
+    .pageContent #image img {
+        float: left;
+        max-width: 40%;
+        margin: 10px;
+    }
 
+    .pageContent #content {
+        max-width: 50%;
+        float: right;
+    }
 
-	#menu {
-		width: 39%;
-		display: inline-block;
-		float: left;
-		padding-left: 10%;
-	}
+    #menu {
+        width: 39%;
+        display: inline-block;
+        float: left;
+        padding-left: 10%;
+    }
 
-	#rightPane {
-		width: 39%;
-		float: right;
-		display: inline-block;
-		padding-right: 10%;
-	}
+    #rightPane {
+        width: 39%;
+        float: right;
+        display: inline-block;
+        padding-right: 10%;
+    }
 }
