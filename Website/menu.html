@@ -311,6 +311,7 @@
                     menu.set("Number", values.phone);
                     menu.set("Total", document.getElementById("totalCost").innerHTML);
                     menu.set("Address", "PICKUP");
+                    menu.set("Status", "PENDING");
                 }
                 for (var i = 0; i < quantity.length; i++) {
                     if (quantity[i] > 0) {
@@ -386,6 +387,7 @@
                         menu.set("Number", values.number);
                         menu.set("Total", document.getElementById("totalCost").innerHTML);
                         menu.set("Address", values.address);
+                        menu.set("Status", "PENDING");
                         for (var i = 0; i < quantity.length; i++) {
                             if (quantity[i] > 0) {
                                 for (var j = 0; j < quantity[i]; j++) {
