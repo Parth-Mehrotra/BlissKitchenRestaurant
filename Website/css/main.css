@@ -60,6 +60,7 @@ nav a {
     font-weight: 800;
     padding: 15px 10px;
     color: #fffac2;
+    font-size: 1vh;
 }
 
 #contentpane {
@@ -290,7 +291,7 @@ h2 {
 }
 
 .overlay_title {
-    font-size: 4vh;
+    font-size: 2.3em;
     margin: 0;
     padding: 0 0 3vh;
     transform: translateY(calc(-100% - 10px));
@@ -298,12 +299,13 @@ h2 {
 }
 
 .overlay_content {
-    font-size: 3vh;
+    font-size: 2em;
     padding-bottom: 2vh;
 }
 
 .innerItem:hover .caption_overlay {
     transform: translateY(0);
+    overflow-y: auto;
 }
 
 .innerItem:hover .overlay_title {
