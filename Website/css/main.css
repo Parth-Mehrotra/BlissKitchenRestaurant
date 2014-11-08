@@ -266,10 +266,6 @@ h2 {
     min-height: 100vh;
 }
 
-#index section {
-    min-height: calc(100vh - 164px);
-}
-
 #indexSection {
     background: #20421E;
 }
@@ -411,11 +407,11 @@ footer {
 }
 
 #menuBody {
-    min-height: calc(100vh - 164px);
+    min-height: calc(100vh - 224px);
 }
 
 #menuBody #page-wrapper {
-    min-height: calc(100vh - 75px);
+    min-height: calc(100vh - 135px);
 }
 
 #menuBody #page-wrapper:after {
@@ -423,11 +419,15 @@ footer {
     display: block;
 }
 
-#about footer, #order footer, #book footer{
+#about footer, #order footer, #book footer {
     margin-top: 0;
 }
 
-#about body, #about section, #book body, #book section, #contact body, #contact section{
+#about body, #about section, #book body, #book section, #contact body, #contact section {
     min-height: calc(100vh - 175px);
     background: #C5DAC5;
+}
+
+#index section {
+    min-height: calc(100vh - 265px);
 }

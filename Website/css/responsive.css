@@ -78,6 +78,32 @@
         clear: none;
     }
 
+    #index section {
+        min-height: calc(100vh - 164px);
+    }
+
+    #menuBody {
+        min-height: calc(100vh - 164px);
+    }
+
+    #menuBody #page-wrapper {
+        min-height: calc(100vh - 75px);
+    }
+
+    #menuBody #page-wrapper:after {
+        content: "";
+        display: block;
+    }
+
+    #about footer, #order footer, #book footer {
+        margin-top: 0;
+    }
+
+    #about body, #about section, #book body, #book section, #contact body, #contact section {
+        min-height: calc(100vh - 175px);
+        background: #C5DAC5;
+    }
+
     .pageContent {
         padding-left: 10%;
         padding-right: 10%;
