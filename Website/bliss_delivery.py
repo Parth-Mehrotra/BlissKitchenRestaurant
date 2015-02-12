@@ -2,6 +2,7 @@ from flask import Flask, request, json
 app = Flask(__name__)
 app.config['DEBUG'] = True
 import stripe
+import SECRETS
 
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
@@ -9,7 +10,7 @@ import stripe
 
 @app.route('/bliss_delivery', methods=['POST'])
 def hello():
-    stripe.api_key = "sk_test_tzrQfMsi0QLz1K8toyOkMNhT"
+    stripe.api_key = STRIPE_API_KEY
     
     # Get the credit card details submitted by the form
     token = request.form["stripeToken"]
