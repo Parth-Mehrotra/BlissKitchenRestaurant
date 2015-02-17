@@ -1,3 +1,6 @@
 [submodule "Website/Tools"]
 	path = Website/Tools
 	url = https://github.com/Parth-Mehrotra/Tools
+[submodule "Tools"]
+	path = Tools
+	url = https://github.com/Parth-Mehrotra/Tools.git
